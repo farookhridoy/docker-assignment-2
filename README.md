@@ -32,6 +32,7 @@ script.blade.php.
     <li>Make sure you are connected to internet.</li>
     <li>Open your terminal / cmd / powershell and run this commands:
         <ul>
+        <li>docker build -t gmfaruk2021/docker-assignment-2:latest -f docker/Dockerfile .</li>
         <li>docker-compose up -d --build</li>
         <li>If need to access docker-compose terminal </li>
         <li>docker-compose exec laravel_app composer install</li>
@@ -39,8 +40,12 @@ script.blade.php.
         <li>docker-compose exec laravel_app php artisan migrate</li>
         <li>docker-compose exec laravel_app php artisan storage:link</li>
         <li>docker-compose exec laravel_app php artisan passport:install</li>
+        <li>docker history gmfaruk2021/docker-assignment-2:latest</li>
         </ul>
     </li>
+    <li>Push to Docker Hub: docker login</li>
+    <li>docker tag gmfaruk2021/docker-assignment-2:latest gmfaruk2021/docker-assignment-2:latest</li>
+    <li>docker push gmfaruk2021/docker-assignment-2:latest</li>
     <li>Setup SMTP Mail Credential (optional)
         <ul>
             <li>MAIL_MAILER=</li>
@@ -58,6 +63,7 @@ script.blade.php.
     <li>Website: <a href="http://localhost:8080">http://localhost:8080</a></li>
     <li>Phpmyadmin: <a href="http://localhost:8081">http://localhost:8081</a></li>
 <h2>User Login Credential</h2>
+</ul>
 <ul>
     <li>Admin: email and password; admin@gmail.com</li>
     <li>Author: email and password; author@gmail.com</li>
