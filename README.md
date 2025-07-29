@@ -23,17 +23,22 @@ Frontend: Bootstrap 5, Backend: AdminLTE 3
     <li>Fontawesome 6</li>
 </ul>
 
-Or you can see all package that i've used in this repo from plugins in public > assets folder and composer.json file. But the plugins and packages are not all used, so you can see the actual one from layouts > app.blade.php and script.blade.php.
+Or you can see all package that i've used in this repo from plugins in public > assets folder and composer.json file.
+But the plugins and packages are not all used, so you can see the actual one from layouts > app.blade.php and
+script.blade.php.
 
 <h2>How to Install</h2>
 <ul>
     <li>Make sure you are connected to internet.</li>
     <li>Open your terminal / cmd / powershell and run this commands:
         <ul>
-            <li>composer install / composer update</li>
-            <li>cp .env.example .env</li>
-            <li>php artisan migrate</li>
-            <li>php artisan db:seed</li>
+        <li>docker-compose up -d --build</li>
+        <li>If need to access docker-compose terminal </li>
+        <li>docker-compose exec laravel_app composer install</li>
+        <li>docker-compose exec laravel_app php artisan key:generate</li>
+        <li>docker-compose exec laravel_app php artisan migrate</li>
+        <li>docker-compose exec laravel_app php artisan storage:link</li>
+        <li>docker-compose exec laravel_app php artisan passport:install</li>
         </ul>
     </li>
     <li>Setup SMTP Mail Credential (optional)
@@ -48,7 +53,10 @@ Or you can see all package that i've used in this repo from plugins in public > 
         </ul>
     </li>
 </ul>
-
+<h2>Access website and phpmyadmin</h2>
+<ul>
+    <li>Website: <a href="http://localhost:8080">http://localhost:8080</a></li>
+    <li>Phpmyadmin: <a href="http://localhost:8081">http://localhost:8081</a></li>
 <h2>User Login Credential</h2>
 <ul>
     <li>Admin: email and password; admin@gmail.com</li>
@@ -60,7 +68,7 @@ Or you can see all package that i've used in this repo from plugins in public > 
     <li>Homepage
         <ul>
             <li>Add slider</li>
-            <li>Add post card by category / tags</li>
+            <li>Add post-card by category / tags</li>
         </ul>
     </li>
     <li>Post

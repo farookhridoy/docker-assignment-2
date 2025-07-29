@@ -25,7 +25,6 @@ php artisan route:clear
 php artisan view:clear
 php artisan cache:clear
 php artisan key:generate
+php artisan storage:link
 php artisan migrate --force || true
-
-# Start PHP-FPM
-exec php-fpm
+php artisan db:seed --force || true
